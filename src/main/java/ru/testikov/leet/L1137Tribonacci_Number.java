@@ -34,7 +34,6 @@ public class L1137Tribonacci_Number {
         System.out.println(tribonacci(7));
         System.out.println(tribonacci(25));
     }
-
     public static int tribonacci(int n) {
         int a = 0, b = 1, c = 1;
         if (n == 0) return a;

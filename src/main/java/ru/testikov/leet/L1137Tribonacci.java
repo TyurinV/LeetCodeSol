@@ -1,7 +1,5 @@
 package ru.testikov.leet;
 
-import java.util.HashMap;
-
 /*
 The Tribonacci sequence Tn is defined as follows:
 
@@ -29,7 +27,7 @@ Constraints:
 0 <= n <= 37
 The answer is guaranteed to fit within a 32-bit integer, ie. answer <= 2^31 - 1.
  */
-public class L1137Tribonacci_Number {
+public class L1137Tribonacci {
     public static void main(String[] args) {
         System.out.println(tribonacci(7));
         System.out.println(tribonacci(25));

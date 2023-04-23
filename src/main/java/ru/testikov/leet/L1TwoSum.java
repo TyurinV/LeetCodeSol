@@ -67,6 +67,6 @@ public class L1TwoSum {
 
     public static void main(String[] args) {
         int[] a = {2,5,5,11};
-        System.out.println(Arrays.toString(new L1TwoSum().twoSum(a, 10)));
+        System.out.println(Arrays.toString(new L1TwoSum().twoSum2(a, 10)));
     }
 }

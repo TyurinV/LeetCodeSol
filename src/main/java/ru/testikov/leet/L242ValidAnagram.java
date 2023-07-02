@@ -30,7 +30,6 @@ public class L242ValidAnagram {
             if (a != 0) return false;
         }
 
-
         return true;
     }
 }

@@ -4,6 +4,9 @@ package ru.testikov.leet;
 //palindrome
 // or false otherwise.
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -26,14 +29,22 @@ public class L234PalindromeLinkedList {
 
     //решение
     public static boolean isPalindrome(ListNode head) {
-        StringBuilder sb = new StringBuilder();
+        List<Integer> arr = new ArrayList<>();
 
         while (head != null) {
-            sb.append(head.val);
+            arr.add(head.val);
             head = head.next;
         }
+        int left = 0;
+        int right = arr.size() - 1;
 
-        return sb.toString().equals(sb.reverse().toString());
+        while (left <= right && arr.get(left) == arr.get(right)) {
+            left++;
+            right--;
+        }
+
+
+        return left >= right;
     }
 }
 

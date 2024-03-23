@@ -13,6 +13,7 @@ public class L217ContainsDuplicate {
         }
         for (Map.Entry<Integer, Integer> tmp : hm.entrySet())
             if (tmp.getValue() > 1) return true;
+
         return false;
     }
 

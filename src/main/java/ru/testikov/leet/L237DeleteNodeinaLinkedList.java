@@ -29,7 +29,8 @@ public class L237DeleteNodeinaLinkedList {
     public static void main(String[] args) {
         ListNode ls = new ListNode(4, new ListNode(5, new ListNode(1, new ListNode(9, null))));
 
-        deleteNode(ls, new ListNode(5));
+        deleteNode2(ls.next);
+
         System.out.println(ls.val);
         while (ls.next != null) {
             System.out.println(ls.next.val);

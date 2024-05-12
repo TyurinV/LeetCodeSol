@@ -10,21 +10,22 @@ public class L914XofaKindinaDeckofCards {
         for (int i = 0; i < deck.length; i++) {
             hm.put(deck[i], hm.containsKey(deck[i]) ? hm.get(deck[i]) + 1 : 1);
         }
-
-        int res = hm.get(deck[0]);
-//акглоритм евклида
+// 2->4->3
+        int result = hm.get(deck[0]);
+//акглоритм эвклида
         for (int a : hm.values()) {
             while (a != 0) {
-                int ostatok = res % a;
-                res = a;
+                int ostatok = result % a;
+                result = a;
                 a = ostatok;
             }
         }
 
-        return res >= 2;
+        return result >= 2;
     }
 
     public static void main(String[] args) {
+        System.out.println(60%100);
 
         int[] deck = {1, 2, 3, 4, 4, 3, 2, 1}; //true
         System.out.println(hasGroupsSizeX(deck));

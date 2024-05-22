@@ -9,7 +9,7 @@ public class L202HappyNumber {
         while (count <= 15) {
             count++;
             if (n == 1) return true;
-            n = (int) summm(intToArray(n));
+            n = summm(intToArray(n));
         }
 
         return false;
@@ -26,8 +26,8 @@ public class L202HappyNumber {
         return tmp;
     }
 
-    public static long summm(int[] num) {
-        long b = 0;
+    public static int summm(int[] num) {
+        int b = 0;
         for (int i = 0; i < num.length; i++) {
             b = b + num[i] * num[i];
         }

@@ -24,12 +24,23 @@ public class L268MissingNumber {
         return arifmeticSum - sum;
     }
 
+    //через XOR
+    public static int missingNumber3(int[] nums) {
+        int n = nums.length;
+        int result = 0;
+        for (int i = 0; i < n; i++) {
+            result ^= nums[i] ^ i;
+        }
+        result ^= n;
+        return result;
+    }
+
     public static void main(String[] args) {
         int[] a = {9, 6, 4, 2, 3, 5, 7, 0, 1};
-        System.out.println(missingNumber2(a));
+        System.out.println(missingNumber3(a));
         int[] b = {0, 1};
         int[] c = {3, 0, 1};
-        System.out.println(missingNumber2(b));
-        System.out.println(missingNumber2(c));
+        System.out.println(missingNumber3(b));
+        System.out.println(missingNumber3(c));
     }
 }

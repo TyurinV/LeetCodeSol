@@ -18,7 +18,7 @@ public class L409LongestPalindrome {
 
     public static void main(String[] args) {
         System.out.println(longestPalindrome("abccccdd"));
-        System.out.println(longestPalindrome("a"));
+        System.out.println(longestPalindrome("a")) ;
         System.out.println(longestPalindrome("abb"));
 
     }

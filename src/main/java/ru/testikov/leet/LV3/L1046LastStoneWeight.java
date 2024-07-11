@@ -4,11 +4,12 @@ import java.util.Arrays;
 
 public class L1046LastStoneWeight {
     public static int lastStoneWeight(int[] stones) {
-        if(stones.length == 1) return stones[0];
+        int n = stones.length;
+        if(n == 1) return stones[0];
         Arrays.sort(stones);
-        while (stones[stones.length-2] != 0) {
-            stones[stones.length - 1] = stones[stones.length - 1] - stones[stones.length - 2];
-            stones[stones.length - 2] = 0;
+        while (stones[n-2] != 0) {
+            stones[n - 1] = stones[n - 1] - stones[n - 2];
+            stones[n - 2] = 0;
             Arrays.sort(stones);
         }
         return Arrays.stream(stones).sum();

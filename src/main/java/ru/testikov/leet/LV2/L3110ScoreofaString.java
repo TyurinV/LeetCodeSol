@@ -1,5 +1,7 @@
 package ru.testikov.leet.LV2;
 
+import java.util.function.Consumer;
+
 public class L3110ScoreofaString {
     public static int scoreOfString(String s) {
         int sum = 0;
@@ -10,7 +12,9 @@ public class L3110ScoreofaString {
     }
 
     public static void main(String[] args) {
-        System.out.println(scoreOfString("hello"));
-        System.out.println(scoreOfString("zaz"));
+        Consumer<String> s = (x) -> System.out.println(); ;
+        s.accept("hello");
+//        System.out.println(scoreOfString("hello"));
+//        System.out.println(scoreOfString("zaz"));
     }
 }
